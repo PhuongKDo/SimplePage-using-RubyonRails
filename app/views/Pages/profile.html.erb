@@ -1,0 +1,162 @@
+<!-- css stylesheet -->
+<style>
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  background-color: #F6F6F6;
+}
+div {
+  background-color: white;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+}
+nav {
+  background-color: black;
+  height: 50px;
+}
+nav ul {  
+}
+nav ul li {
+  list-style-type: none;
+  width: 150px;
+  float: left;
+  border-right: 1px solid #CCC;
+  text-align: center;
+}
+li a {
+  text-decoration: none;
+  color: white;
+  line-height: 50px;
+  display: block;
+}
+li :hover {
+  background-color: #E9DFDA;
+  color:black;
+}
+h1 {
+  background-color: #E9DFDA;
+  color: black;
+  padding: 10px;
+}
+ul {
+  padding-left: 40px;
+}
+footer {
+  background-color: black;
+  color: white;
+  height: 50px;
+  text-align: center;
+}
+</style>
+
+<!-- navigation bar using unordered list -->
+<nav>
+  <ul>
+    <!-- using link_to tag -->
+    <li><%= link_to 'Profile', 'http://localhost:3000/profile' %></li>
+    <li><%= link_to 'Product Review', 'http://localhost:3000/review' %></li>
+  </ul>
+</nav>
+
+<!-- title -->
+<head>
+  <title>Profile</title>
+</head>
+
+<!-- body of content -->
+<body>
+  <div id="container">
+    <!-- using h2 tag -->
+    <h2>Phuong K Do </h2>
+    <br>
+    <!-- using image_tag -->
+    <%= image_tag("prof_pic.png") %>
+    <br><br>
+    <b><p>Hello, welcome to my page! 
+    I hope you'll enjoy your stay. To start off, I'm currently an undergraduate
+    at The University of Memphis. I'm the first generation to go to college,
+    which is quite exciting. I hope to learn as much as I can and meet new people!</b></p>
+    <br>
+    <h1> My Homepage:</h1>
+    <br>
+    <!-- using link_to tag -->
+    <%= link_to 'http://localhost:3000/kpdo', 'http://localhost:3000/kpdo' %>
+    <!-- using h1 tag -->
+    <br><br>
+    <h1> Skills: </h1>
+    <br>
+      <!-- unordered list for type of skills -->
+      <ul> 
+          <li>Java (beginner)</li>
+          <li>Python (intermediate)</li>
+          <li>Ruby on Rails (beginner)</li>
+          <li>Android Studio (intermediate)</li>
+          <li>SAS Programming (beginner)</li>
+          <li>HTML4/5 (beginner)</li>
+          <li>PHP (beginner)</li>
+          <li>SQL (beginner)</li>
+      </ul>
+    <br>
+    <h1>Enough about me, tell me about yourself!</h1>
+    <br><br>
+      <!-- form using type=text tag -->
+      <form action="/action_page.php">
+        Your name: <input type="text" name="name"><br><br>
+        Your email: <input type="text" name="email"><br><br>
+        Message: 
+      <!-- textarea to allow multi-lines text-->
+        <textarea rows="8" cols="50"></textarea>
+      </form>
+    <br><br>
+    <h3>Which programming language do you use the most?</h3>
+    <br>
+      <!-- form using type=radio tag -->
+      <form action="/action_page.php">
+        JavaScript: <input type="radio" name="most_javascript"><br>
+        HTML: <input type="radio" name="most_html"><br>
+        CSS: <input type="radio" name="most_css"><br>
+        SQL: <input type="radio" name="most_sql"><br>
+        Java: <input type="radio" name="most_java"><br>
+        Bash/Shell: <input type="radio" name="most_bash"><br>
+        Python: <input type="radio" name="most_python"><br>
+        C#: <input type="radio" name="most_csharp"><br>
+        PHP: <input type="radio" name="most_php"><br>
+        C++: <input type="radio" name="most_cplusplus"><br>
+        C: <input type="radio" name="most_c"><br>
+        Ruby: <input type="radio" name="most_ruby"><br>
+        Swift: <input type="radio" name="most_swift"><br>
+      Other: <input type="radio" name="most_other"><br>
+      </form>
+    <br>
+    <h3>Which programming language did you learned first?</h3>
+    <br>
+    <!-- using dropdown list -->
+    <input list="first_code">
+    <!-- input using datalist tag -->
+    <datalist id="first_code">
+    <option value="JavaScript">
+    <option value="HTML">
+    <option value="CSS">
+    <option value="SQL">
+    <option value="Java">
+    <option value="Bash/Shell">
+    <option value="Python">
+    <option value="C#">
+    <option value="PHP">
+    <option value="C++">
+    <option value="C">
+    <option value="Ruby">
+    <option value="Swift">
+    <option value="Other">
+    </datalist>
+    <br><br>
+    <!-- using button tag -->
+    <button type="button">Submit Contact Info ✉</button>
+  </div>
+</body>
+<br><br>
+<footer><br>Software Engineer Spring2019 Bootcamp.</footer>

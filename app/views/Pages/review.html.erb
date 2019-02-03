@@ -1,0 +1,236 @@
+<!-- css stylesheet -->
+<style>
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body{
+  background-color: #F6F6F6;
+}
+div {
+  background-color: white;
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+}
+nav {
+  background-color: black;
+  height: 50px;
+}
+nav ul {  
+}
+nav ul li {
+  list-style-type: none;
+  width: 150px;
+  float: left;
+  border-right: 1px solid #CCC;
+  text-align: center;
+}
+li a {
+  text-decoration: none;
+  color: white;
+  line-height: 50px;
+  display: block;
+}
+li :hover {
+  background-color: #E9DFDA;
+  color:black;
+}
+h1 {
+  background-color: #E9DFDA;
+  color: black;
+  padding: 10px;
+}
+ul {
+  padding-left: 40px;
+}
+table {
+  width: 900px;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  text-align: left;
+}
+table tr:nth-child(even) {
+  background-color: #eee;
+}
+table th {
+  background-color: black;
+  color: white;
+  margin: 0;
+}
+footer {
+  background-color: black;
+  color: white;
+  height: 50px;
+  text-align: center;
+}
+</style>
+
+<!-- navigation bar using unordered list -->
+<nav>
+  <ul>
+    <!-- using link_to tag -->
+    <li><%= link_to 'Profile', 'http://localhost:3000/profile' %></li>
+    <li><%= link_to 'Product Review', 'http://localhost:3000/review' %></li>
+  </ul>
+</nav>
+
+<!-- title -->
+<head>
+  <title>Product Review</title>
+</head>
+
+<!-- body of content -->
+<body>
+  <div id="container">
+    <!-- using h2 tag -->
+    <h2>HP Omen Gaming Tower, Intel Core i7-7700, Nvidia GTX 1070 8GB Graphic Card, 16GB Memory, 256GB SSD + 1TB HD, Windows 10 home,</h2>
+    <br><br>
+    <!-- using image_tag-->
+    <%= image_tag("product_img.png") %>
+    <br>
+    <h4>Price Tag: $1,249.99</h4>
+    <br>
+    <!-- using h1 tag -->    
+    <h1> Product Details: </h1>
+    <br>
+    <!-- iframe for youtube video -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Js74NYJWBFI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br><br>
+    <p>
+      <!-- unordered list for computer specs -->
+      <ul> 
+          <li>VR READY</li>
+          <li>7th Gen Intel Core i7-7700 processor</li>
+          <li>NVIDIA GeForce GTX 1070 graphics</li>
+          <li>4 USB 3.0 ports maximize the latest high-speed devices</li>
+          <li>Bluetooth 4.2 interface syncs with compatible devices</li>
+      </ul>
+    </p>
+    <br><br>
+    <hr>
+    <h5>Key Specifications:</h5>
+    <br>
+    <table>
+      <tr>
+        <th>Storage Type</th>
+        <th>Total Storage Capacity</th> 
+        <th>Hard Drive Capacity</th>
+        <th>System Memory(RAM)</th>
+        <th>Graphics</th>
+        <th>Processor Speed(Base)</th>
+        <th>Processor Model</th>
+        <th>Processor Model Number</th>
+        <th>Operating System</th>
+      </tr>
+      <tr>
+        <td>HDD</td>
+        <td>1000 gigabytes</td>
+        <td>1000 gigabytes</td> 
+        <td>16 gigabytes</td>
+        <td>NVIDIA GeForce GTX 1070</td>
+        <td>3.6 gigahertz</td>
+        <td>Intel 7th Generation Core i7</td>
+        <td>7700</td>
+        <td>Windows 10 Home</td>
+       </tr>
+    </table>
+    <br><br>
+    <h1>Reviews</h1>
+    <br>
+    <body><b> When you are looking for a powerful gaming desktop at and affordable price, look no further.
+    The HP Omen Gaming Tower costs under $1300. The Omen has a good balance in term
+    of performance, features, heat management, and noise output. Compare to brand like Asus, MSI, and 
+    Alienware, the HP Omen competes well with these more popular gaming brands. </b></body>
+    <br><br>
+    <hr>
+    <h5>My final rating:</h5>
+    <!-- using image_tag-->
+    <%= image_tag("stars.png")%>
+    <h1>Leave Feedbacks</h1>
+    <br><br>
+    <!-- large area textarea to allow multi-lines input -->
+    <textarea rows="5" cols="60">Leave your product feedback here.</textarea>
+    <br>
+    <h5>How accurate was the product description?</h5>
+      <!-- form using type=radio -->
+      <form action="/action_page.php" size="4" style="color:#ffcc33">
+        ★ <input type="radio" name="star1">
+        ★★ <input type="radio" name="star2">
+        ★★★ <input type="radio" name="star3">
+        ★★★★ <input type="radio" name="star4">
+        ★★★★★ <input type="radio" name="star5">
+      </form>
+      <br>
+    <h5>How satisfied were you with the product?</h5>
+      <form action="/action_page.php" size="4" style="color:#ffcc33">
+        ★ <input type="radio" name="star1">
+        ★★ <input type="radio" name="star2">
+        ★★★ <input type="radio" name="star3">
+        ★★★★ <input type="radio" name="star4">
+        ★★★★★ <input type="radio" name="star5">
+      </form>
+      <br>
+    <h5>Why did you select those rating?</h5>
+    <!--small area textarea to allow multi-lines input -->
+    <textarea rows="2" cols="60"></textarea>
+    <br>
+    <h5>Would you recommend this product?</h5>
+    <input list="recommend">
+    <!-- input using datalist -->
+    <datalist id="recommend">
+      <option value="Yes">
+      <option value="No">
+      <option value="Maybe">
+    </datalist>
+    <br><br>
+    <!-- form using type=text -->
+    <form action="/action_page.php">
+      <h5>Any last words? (Input "N/A" for no last word.)</h5>
+      <input type="text" name="last_word"><br><br>
+    </form>
+    <!-- button tag -->
+    <button type="button">Leave Feedback</button>    <button type="button">Cancel</button> 
+  </div>
+  <div id="container_customerreview">
+    <hr>
+    <h6>Customer Feedbacks</h6>
+    <br>
+    <!-- using image_tag-->
+    <%= image_tag("stars_four.png")%>
+    <h3>Awesome Gaming Power, Low Price</h3>
+    <p>The HP Omen Desktop 870-244 provides an incredible amount of power from the 7th generation Intel Core i7 and an NVIDIA GeForce GTX 1070 graphics card. As you can see with the pictures in this review, there is also a lot of expandability within the case of this PC for additional drives. There is room for several additional hard drives or SATA based solid state drives. Unfortunately, there isn't room for adding additional PCIe cards into the PC given the PC case design is quite compact and the NVIDIA GTX 1070 is a full size very powerful graphics card. That said however, there really isn't anything else you would need to add as HP has provided a very capable PC for gaming or writing the occasional paper for high school or college. One really nice feature is that the 16GB of memory came in two DIMM's, leaving another two memory slots free if you'd like to expand the memory to 32GB. This is an incredible amount of compute power with the Intel Core i7 and graphics power with the NVIDIA GeForce 1070.
+    </p>
+    <br>
+    <!-- using image_tag-->
+    <%= image_tag("check.png")%><p style="color:green" size="3"> I would recommend this.</p>
+    <br>
+    <hr>
+    <!-- using image_tag-->
+    <%= image_tag("stars_five.png")%>
+    <h3>Excellent gaming pc</h3>
+    <p>Bought this just for gaming usage only not everyday use keep in mind*
+
+      Overall A- build here from hp was looking to build my own but when I spotted this for 1150 on sale I couldn't resist. So far this baby runs like smooth like butter. The 1070 performs excellent.
+
+      Only cons I have this far: 
+      * cable management is horrible. 
+      * I had to purchase my own ssd
+      * had to purchase a 2.5" to 3.5" drive adapter due to no support. 
+
+      After upgrading to ssd and a 2tb hdd for storage I can't complain. This is definitely worth the buy with the current price of 1070 gtx and they throw in i7 7th gen with 16gb of ram a solid rub case. I'd buy this without the 100 off no problem.
+    </p>
+    <!-- using image_tag-->
+    <br>
+    <%= image_tag("check.png")%><p style="color:green" size="3"> I would recommend this.</p>
+  </div>
+</body>
+<br><br>
+<footer><br>Software Engineer Spring2019 Bootcamp.</footer>
+
+
